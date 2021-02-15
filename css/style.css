@@ -28,12 +28,19 @@ body {
   margin: 0;
 }
 .header {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .header-description {
   font-family: "Gotham Pro Light";
   letter-spacing: 0.12px;
   font-size: 12px;
+}
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/parallax-lepestki.png");
 }
 .text-color-red {
   font-family: "Gotham Pro Medium";
@@ -89,8 +96,12 @@ body {
 .flowers-slider {
   margin-top: 87px;
   margin-bottom: 83px;
-  width: 100%;
+  width: 85%;
   text-align: center;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: red;
 }
 .hero-cta {
   display: block;
@@ -113,6 +124,9 @@ body {
   margin-top: 36px;
   cursor: pointer;
   border: none;
+}
+.button:hover {
+  background-color: #ff1844;
 }
 .reviews {
   padding-top: 100px;
@@ -283,6 +297,9 @@ body {
   background: url("../img/caret.svg") no-repeat center;
   vertical-align: middle;
 }
+.more.open::after {
+  background: url("../img/caret-up.svg") no-repeat center;
+}
 .offer {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -375,6 +392,9 @@ body {
   width: 100%;
   padding: 10px;
   font-size: 18px;
+}
+.hidden-card {
+  display: none;
 }
 @media (max-width: 768px) {
   .header {
