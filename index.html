@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-1">
+                    <img src="img/lepestok-top.png" alt="">
+                </div>
+            </div>
+        </div>
     <header class="header">
         <div class="container">
             <div class="row">
@@ -38,6 +47,7 @@
     </header>
 
     <section class="hero">
+        <div class="parallax">
         <div class="container">
             <h1 class="hero-title">Эксклюзивные цветы и букеты Flowers shop</h1>
             <p class="hero-description">Первая в России эксклюзивная доставка цветов для людей, которые ценят <b>уникальность</b></p>
@@ -72,7 +82,7 @@
                 <div class="swiper-button-next"></div>
             </div>
             <!-- ./swiper-container -->
-
+        </div>
             <span class="hero-cta">Закажите эксклюзивный букет <strong>со скидкой 10%</strong></span>
             <a data-fancybox data-src="#modal" href="javascript:;" class="button">Заказать букет</a>
         </div>
@@ -329,7 +339,7 @@
             </div>
             <!-- /.col-md-3 -->
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 hidden-card">
                 <div class="card">
                     <img src="img/flower-5.png" height="80" alt="romashka" class="card-image">
                     <h3 class="card-title">Ромашки</h3>
@@ -369,7 +379,7 @@
             </div>
             <!-- /.col-md-3 -->
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 hidden-card">
                 <div class="card">
                     <img src="img/flower-6.png" height="80" alt="orchid" class="card-image">
                     <h3 class="card-title">Орхидеи</h3>
@@ -409,7 +419,7 @@
             </div>
             <!-- /.col-md-3 -->
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 hidden-card">
                 <div class="card">
                     <img src="img/lilia.png" height="80" alt="lilii" class="card-image">
                     <h3 class="card-title">Лилии</h3>
@@ -449,7 +459,7 @@
             </div>
             <!-- /.col-md-3 -->
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 hidden-card">
                 <div class="card">
                     <img src="img/hibiscus.png" height="80" alt="hibiscus" class="card-image">
                     <h3 class="card-title">Гибискусы</h3>
@@ -491,7 +501,21 @@
         </div>
         <!-- /.row -->
 
-        <a href="#" class="more">Все цветы</a>
+        <a class="more" href="#">Все цветы</a>
+        <script>
+            $(document).ready(function () {
+                $('.more').click(function () {
+                    $('.hidden-card').slideToggle(500, function () {
+                        if ($(this).is(':hidden')) {
+                            $('.more').removeClass('open');
+                        } else {
+                            $('.more').addClass('open');
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
 
     </div>
     <!-- /.container -->
@@ -576,7 +600,6 @@
     </form>
 </div>
 <script src="js/swiper-bundle.min.js"></script>
-<script src="js/jquery.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>
